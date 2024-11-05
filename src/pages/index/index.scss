@@ -1,0 +1,18 @@
+.index_page {
+  background-color: rgb(161, 198, 214);
+  height: 90vh;
+
+  .title_center {
+    text-align: center;
+    padding: 24px 0;
+    color: #fff;
+  }
+  .description {
+    color: #fff;
+    margin-bottom: 6%;
+  }
+  .at-button--primary {
+    background-color: #806396;
+    width: 90vw;
+  }
+}

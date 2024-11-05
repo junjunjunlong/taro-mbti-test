@@ -1,26 +1,34 @@
-import { View, } from '@tarojs/components'
-import { AtButton, AtTimeline } from 'taro-ui'
+import { View, Image } from '@tarojs/components'
+import { AtButton } from 'taro-ui'
 
-import "taro-ui/dist/style/components/button.scss" // 按需引入
-import "taro-ui/dist/style/components/timeline.scss";
-import "taro-ui/dist/style/components/icon.scss";
+import indexBg from '../../assets/indexBg.jpeg'
+import Footer from '../../components/footer/index'
+import './index.scss'
 
 export default () => {
   return (
-    <View className='index'>
-      <AtButton loading type='primary'>按钮文案</AtButton>
-      <AtTimeline
-        items={[
-          { title: '刷牙洗脸' },
-          { title: '吃早餐' },
-          { title: '上班' },
-          { title: '睡觉' }
-        ]}
-      >
-      </AtTimeline>
-    </View>
+    <>
+      <View className='index_page'>
+        <View className='at-article__h1 title_center'>
+          MBTI 性格测试
+        </View>
+        <View className='at-article__content'>
+          <View className='at-article__section'>
+            <View className='at-article__h3 description'>只需2分钟，就能非常准确地描述出你是谁，以及你的性格特点</View>
+            <AtButton type='primary' circle onClick={() => {
+              console.log(1);
+            }}
+            >开始测试</AtButton>
+            <Image
+              className='at-article__img'
+              src={indexBg}
+            />
+          </View>
+        </View>
+      </View>
+      <Footer />
+    </>
   )
-
 }
 
 
